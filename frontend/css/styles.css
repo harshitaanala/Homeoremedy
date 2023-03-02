@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set CSS variables for easy changes */
+:root {
+    --bg-color: #ccf;
+    --nav-bg-color: #5d3fd3;
+    --font-family: "Poppins", sans-serif;
+    --nav-link-hover: #ffea47;
+    --logo-span-color: #ff5f13;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--nav-bg-color);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 0 2.5rem;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.nav-links li:hover {
+    color: var(--nav-link-hover);
+    cursor: pointer;
+}
+
+.nav-links li:active {
+    transform: scale(0.98);
+}
+
+.nav-links a {
+    list-style: none;
+    margin: 0 2.5rem;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.nav-links a:hover {
+    color: var(--nav-link-hover);
+    cursor: pointer;
+}
+
+.nav-links a:active {
+    transform: scale(0.98);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.logo span {
+    color: var(--logo-span-color);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        padding-top: 30px;
+    }
+
+    .navbar .nav-links li {
+        margin: 0 1rem;
+        font-size: 16px;
+    }
+}
+ /* button css */
+
+/* button {
+    background-color: #5d3fd3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;   
+} */
+/*   
+  .container div > p span {
+    color: red;
+  }
+  
+  p {
+    position: relative;
+    top: 30px;
+  }
+  
+  p a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+    transition: 0.4s;
+  }
+  
+  .signup {
+    color: white;
+    background-color: rgba(104, 85, 224, 1);
+  }
+  
+  .log {
+    color: rgb(104, 85, 224);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(104, 85, 224, 1);
+  }
+  
+  button:hover {
+    color: white;
+    width: 50px;;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+  } */
+  
+
+  .button {
+    background-color: rgb(61, 33, 61); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   border-radius: 20px;
+  }
+  
+/* button div class to lower the difference between distance */
+ 
+/* footer ka css */
+
+footer {
+    background-color: black;
+    color: white;
+    bottom: 0;
+    width: 99vw;
+    font-size: 16px;
+    margin-top: 500px;
+}
+
+footer * {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.row {
+    padding: 1em 1em;
+}
+
+.row.primary {
+    display: grid;
+    grid-template-columns: 3fr 2fr 4fr;
+    align-items: stretch;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+}
+
+h3 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.4em;
+    white-space: nowrap;
+}
+
+ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #c7940a;
+}
+
+.about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+}
+
+/* input,
+button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #c7940a;
+    color: #ffffff;
+} */
+
+div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+
+.social i {
+    color: #bac6d9;
+}

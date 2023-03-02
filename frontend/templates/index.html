@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo"><span>Lo</span> Go</h1>
+        <ul class="nav-links">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>  
+          <li>Contact</li>
+        </ul>  
+        <div class="buttondiv">
+            <button class="button" onclick="login()">Login</button>
+            <button class="button" onclick="singUp()">SignUp</button>
+        </div>     
+    </nav>
+
+      <footer>
+      <div class="row primary">
+        <div class="column about">
+            <h3>Connect</h3>
+            <p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>   Sienna Towers, Service Road, Bangalore
+            </p>
+            <!-- details to be adeed -->
+        </div>
+    
+        <div class="column link">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </div>
+        
+        <div class="column subscribe">
+            <h3>Newsletter</h3>
+            <div>
+               <input type="email" placeholder="Your email id here" />
+               <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    function login() {
+        window.location.href = "login.html";
+    }
+    function signUp() {
+        window.location.href = "signup.html";
+    }
+</script>
+</html>
