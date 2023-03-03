@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medical Report Generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body class="bg-neutral-400">
+    <div class="max-w-md mx-auto mt-12">
+      <form id="report-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="name">
+            Name:
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" name="name" placeholder="Enter name">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="age">
+            Age:
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="age" type="number" name="age" placeholder="Enter age">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="gender">
+            Gender:
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="gender" type="text" name="gender" placeholder="Enter gender">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="symptoms">
+            Symptoms:
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="symptoms" type="text" name="symptoms" placeholder="Enter symptoms">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="days">
+            Days:
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="days" type="number" name="days" placeholder="Enter number of days">
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="generateReport()">
+            Generate Report
+          </button>
+        </div>
+      </form>
+
+    <div id="report-container"></div>
+
+    <script>
+      function generateReport() {
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var gender = document.getElementById("gender").value;
+        var symptoms = document.getElementById("symptoms").value;
+        var days = document.getElementById("days").value;
+
+        var url = "http://127.0.0.1:5000/generate_report";
+
+        $.post(
+            url,
+            {
+                name: name,
+                age: age,
+                gender: gender,
+                symptoms: symptoms,
+                days: days
+            },
+            function(data, status) {
+                console.log(data);
+                document.getElementById("report-container").innerHTML = data;
+            }
+        )
+      }
+    </script>
+  </body>
+</html>
