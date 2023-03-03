@@ -18,18 +18,16 @@
             <li onclick="home()">Home</li>
             <li onclick="about()">About</li>
             <li onclick="service()">Chatbot</li>
+            <li onclick="report()">Report</li>
             <li onclick="contact()">Contact</li>
         </ul>
     </nav>
     <div class="bg-blue-100 p-8">
         <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to our Homoepedia</h1>
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to our HomeoRemedy</h1>
             <p class="text-lg text-gray-700">
-                Discover natural and effective remedies with our homeopathic medical website. Our site is dedicated to
-                providing safe and personalized treatment options for a variety of health conditions.
+                We strive to provide the best possible service to our customers. Our mission is to make sure that everyone who visits our website has a positive experience.
             </p>
-            <a href="#" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg mt-8 hover:bg-blue-600">Book an
-                Appointment</a>
         </div>
     </div>
     <section class="bg-white py-12">
@@ -39,27 +37,43 @@
                 <div class="w-full md:w-1/3 px-4 mb-8">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <div class="p-4">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Chatbot</h3>
-                            <p class="text-gray-700">Chatbot Suggesting Medicines for specific symptoms</p>
-                            <p class="text-gray-700">Suggesting More one than remedies</p>
+                            <h3 class="text-xl text-center font-bold text-gray-800 mb-2">Chatbot</h3>
+                            <p class="text-gray-700">Chatbot Suggesting Medicines for specific symptoms.</p>
+                            <p class="text-gray-700">Suggesting more than one remedy.</p>
+                            <br/>
+                            <div class="text-center">
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="service()">
+                                Try it
+                            </button>
+                        </div>
                         </div>
                     </div>
                 </div>
                 <div class="w-full md:w-1/3 px-4 mb-8">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <div class="p-4">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Service 2</h3>
-                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h3 class="text-xl text-center font-bold text-gray-800 mb-2">Report Generation</h3>
+                            <p class="text-gray-700">Provides a report after diagnosis of the patients.</p>
+                            <p class="text-gray-700">Effortlessly generate a medical report with our app.</p>
+                            <div class="text-center">
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="report()">
+                                    Try it
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="w-full md:w-1/3 px-4 mb-8">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <div class="p-4">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Service 3</h3>
-                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h3 class="text-xl text-center font-bold text-gray-800 mb-2">Discussion Portal</h3>
+                            <p class="text-gray-700">Connect with fellow doctors and share knowledge.</p>
+                            <p class="text-gray-700">Connect with fellow doctors and share knowledge.</p>
+                            <div class="text-center">
+                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="report()">
+                                    Try it
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,7 +94,7 @@
             <div class="column about">
                 <h3>Connect</h3>
                 <p>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Sienna Towers, Service Road, Bangalore
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> VESIT, Chembur, Mumbai
                 </p>
                 <!-- details to be adeed -->
             </div>
@@ -123,6 +137,9 @@
     }
     function home() {
         window.location.href = "index.html";
+    }
+    function report() {
+        window.location.href = "detail.html";
     }
 
 </script>
