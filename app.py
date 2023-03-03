@@ -6,13 +6,13 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
-medicines_df = pd.read_csv("Datasets/homeo.csv")
+medicines_df = pd.read_csv("Datasets/HomeoCSV.csv")
 
 def suggest_medicines(symptoms):
     matching_medicines = medicines_df[medicines_df['English'].apply(lambda x: all([symptom in x.split(", ") for symptom in symptoms]))]
     matching_medicines['English'] = matching_medicines['English'].apply(lambda x: len(set(symptoms) & set(x.split(", "))))
     matching_medicines = matching_medicines.sort_values(by='English', ascending=False)
-    return matching_medicines.head(5)['Remedy_1'].tolist() if not matching_medicines.empty else []
+    return matching_medicines.head(5)['Remedy'].tolist() if not matching_medicines.empty else []
 
 @app.route('/')
 def home():
