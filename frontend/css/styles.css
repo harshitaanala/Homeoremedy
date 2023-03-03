@@ -162,7 +162,35 @@ body {
     font-size: 16px;
    border-radius: 20px;
   }
+
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+
+  /* keep result-list hidden */
+    #result-list {
+        display: none;
+    }
+  /* #result-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
   
+  #result-list li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #result-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #result-list li:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+  } */
 /* button div class to lower the difference between distance */
  
 /* footer ka css */

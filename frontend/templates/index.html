@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/map.js"></script>
 </head>
 
 <body>
@@ -19,16 +20,13 @@
             <li onclick="service()">Chatbot</li>
             <li onclick="contact()">Contact</li>
         </ul>
-        <div class="buttondiv">
-            <button class="button" onclick="login()">Login</button>
-            <button class="button" onclick="signUp()">SignUp</button>
-        </div>
     </nav>
     <div class="bg-blue-100 p-8">
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to our Homoepedia</h1>
             <p class="text-lg text-gray-700">
-                Discover natural and effective remedies with our homeopathic medical website. Our site is dedicated to providing safe and personalized treatment options for a variety of health conditions.
+                Discover natural and effective remedies with our homeopathic medical website. Our site is dedicated to
+                providing safe and personalized treatment options for a variety of health conditions.
             </p>
             <a href="#" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg mt-8 hover:bg-blue-600">Book an
                 Appointment</a>
@@ -68,6 +66,15 @@
             </div>
         </div>
     </section>
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap -mx-4">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+    <ul id="result-list"></ul>
+
     <footer>
         <div class="row primary">
             <div class="column about">
@@ -117,6 +124,8 @@
     function home() {
         window.location.href = "index.html";
     }
+
 </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_B78xcbPZnHi79nSv3OSgx-kyM80OIz4&callback=initMap&libraries=places"></script>    
 
 </html>
