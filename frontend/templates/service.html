@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medicine Suggesting Chatbot</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<nav class="navbar">
+	<h1 class="logo"><span>Lo</span> Go</h1>
+	<ul class="nav-links">
+	  <li onclick="home()">Home</li>
+	  <li onclick="about()">About</li>
+	  <li onclick="service()">Chatbot</li>  
+	  <li onclick="contact()">Contact</li>
+	</ul>  
+	<div class="buttondiv">
+		<button class="button" onclick="login()">Login</button>
+		<button class="button" onclick="signUp()">SignUp</button>
+	</div>     
+</nav>
+
+<body class="bg-zinc-800">
+	<div class="container mt-10 mx-auto px-4 py-8">
+		<div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+			<div class="py-4 px-6">
+				<h1 class="text-2xl font-bold mb-2">Medicine Suggesting Chatbot</h1>
+				<p class="text-gray-600 mb-4">What symptoms are you experiencing?</p>
+				<div class="flex flex-row border-b border-gray-200 pb-4">
+					<input type="text" id="symptoms" class="flex-grow mr-4 py-2 px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500" />
+					<button onclick="sendMessage()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
+				</div>
+				<div id="chat" class="mt-4"></div>
+			</div>
+		</div>
+	</div>
+	<footer style="margin-top: 300px;">
+        <div class="row primary">
+            <div class="column about">
+                <h3>Connect</h3>
+                <p>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> Sienna Towers, Service Road, Bangalore
+                </p>
+                <!-- details to be adeed -->
+            </div>
+
+            <div class="column link">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="column subscribe">
+                <h3>Newsletter</h3>
+                <div>
+                    <input type="email" placeholder="Your email id here" />
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<script>
+		function sendMessage() {
+      var symptoms = $("#symptoms").val();
+      $.get("http://127.0.0.1:5000/send_message/" + symptoms, function(data) {
+          $("#chat").append("<p>You: " + symptoms + "</p><p>Response: " + data.response + "</p>");
+      });
+      $("#symptoms").val("");
+  }
+  function login() {
+	window.location.href = "login.html";
+	}
+	function signUp() {
+		window.location.href = "signup.html";
+	}
+	function service(){
+		window.location.href = "service.html";
+	}
+	function about(){
+		window.location.href = "about.html";
+	}
+	function contact(){
+		window.location.href = "contact.html";
+	}
+	function home(){
+		window.location.href = "index.html";
+	}
+	</script>
+</body>
+</html>
