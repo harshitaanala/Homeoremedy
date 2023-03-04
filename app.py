@@ -14,6 +14,23 @@ def suggest_medicines(symptoms):
     matching_medicines = matching_medicines.sort_values(by='English', ascending=False)
     return matching_medicines.head(5)['Remedy'].tolist() if not matching_medicines.empty else []
 
+import csv
+# load the symptoms and remedies from the CSV file
+symptoms = []
+remedies = []
+with open('D:\Praxis-23\Datasets\HomeoCSV1.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        symptoms.append(row[5])
+        remedies.append(row[7])
+
+# define a function to suggest the remedy based on the symptoms
+def suggest_remedy(symptom):
+    for i in range(len(symptoms)):
+        if symptom.lower() in symptoms[i].lower():
+            return remedies[i]
+    return "Sorry, I'm not sure what remedy to suggest for that symptom."
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -24,6 +41,13 @@ def send_message(symptoms):
     medicines = suggest_medicines(symptoms)
     message = "Based on your symptoms, I suggest the following medicines: " + ", ".join(medicines)
     res = jsonify({'response': message})
+    res.headers.add('Access-Control-Allow-Origin', '*')
+    return res
+
+@app.route('/send_remedy/<symptom>', methods=['GET', 'POST'])
+def send_remedy(symptom):
+    remedy = suggest_remedy(symptom)
+    res = jsonify({'response': remedy})
     res.headers.add('Access-Control-Allow-Origin', '*')
     return res
 
