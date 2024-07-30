@@ -1,4 +1,4 @@
-# Homeoremedy
+# 🌿 Homeoremedy
 HomeRemedy is an intelligent system designed to suggest home medicines based on patient symptoms and generate prescriptions accordingly. The project aims to provide accessible healthcare solutions by leveraging natural language processing (NLP) and machine learning techniques. By analyzing user-provided symptoms, the system recommends appropriate home remedies, ensuring personalized and effective treatment options.
 
 ## ✨ Features
