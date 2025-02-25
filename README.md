@@ -23,6 +23,10 @@ HomeRemedy is an intelligent system designed to suggest home medicines based on 
 * Enter Symptoms: Input your symptoms into the provided text box.
 * Get Recommendations: Receive personalized home medicine recommendations based on symptom analysis.
 * Generate Prescription: View and download the generated prescription with recommended home medicines and usage instructions.
+
+## Screenshots
+![homeo](https://github.com/user-attachments/assets/dd09e44f-3d27-47fc-adcc-b6c8fb4922d6)
+
   
 ## 🤝 Contributing
 Contributions to HomeRemedy are welcome! If you'd like to contribute, please send a request on my mail id.
